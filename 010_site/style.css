@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+:root{
+    --cor1: #e5f9e0;
+    --cor2: #a3f7b5;
+    --cor3: #40c9a2;
+    --cor4: #2f9c95;
+    --cor5: #7e2e84;
+    --cor6: #006d66;
+
+    --fonte1: "Lato", arial, helvetica, sans-serif;
+    --fonte2: "Idroid", arial, helvetica, sans-serif;
+}
+body{
+    font-family: var(--fonte1);
+    background-repeat: no-repeat;
+    background-color: #e5f9e0;
+    margin: 0px;
+}
+h2{
+    background: linear-gradient(to right, var(--cor3), white); 
+    text-indent: 10px;
+    font-family: var(--fonte2);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    background: linear-gradient(to bottom, var(--cor3), var(--cor4));
+    padding: 5px;
+    min-width: 320px;
+    max-width: 100%;
+}
+nav{
+    background-color: var(--cor4);
+    padding: 5px;
+    min-width: 320px;
+    max-width: 100%;
+}
+nav> a:hover{
+    background-color: var(--cor3);
+    color: rgb(0, 0, 0);
+}
+main{
+    background-color: white;
+    margin: auto;
+    min-width: 320px;
+    max-width: 800px;
+    padding: 20px;
+}
+main p{
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 26px;
+}
+main h1{
+    font-family: IDroid; 
+    color: var(--cor4)"
+}
+main strong{
+    color: var(--cor5);
+}
+main .video{
+    background-color: var(--cor6);
+    margin: 20px -20px 20px -20px;
+    position: relative;
+    padding-bottom: 59%;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 90%;
+    height: 90%;
+}
+footer{
+    margin-top: 12px;
+    background-color: #00665f;
+    text-align: center; 
+    padding: 5px;
+    color: white;
+}
+.espaçamento-imagem{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.tabela-titulo{
+    margin-top: 20px;
+    background-color: var(--cor4); 
+    color: white; 
+    padding: 10px; 
+    border-radius: 8px 8px 0px 0px;
+}
+.tabela-texto{
+    background-color: #00d3978a; 
+    color: black; 
+    padding: 5px; 
+    border-radius: 0px 0px 8px 8px;
+}
+.site-externo{
+    padding: 2px; 
+    background-color: var(--cor3); 
+    color: #00663c;
+}
+.site-externo:hover{
+    padding: 2px; 
+    background-color: var(--cor3); 
+    color: #00663c;
+    text-decoration-line: underline;
+    text-decoration-color: #004227;
+}
