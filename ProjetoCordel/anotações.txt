@@ -1,0 +1,2 @@
+vw = viewport width
+50vw = 50% da largura da tela
