@@ -17,24 +17,33 @@ main > section{
     width: 320px;
     height: 600px;
     margin: auto;
+    padding: 10px;
     background-color: white;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.263);
 }
 
 main > section > h1{
     background-color: white;
-    margin: 8px 0px 10px 2%;
+    margin: 12px 0px 0px 2%;
 }
 
-main > section > a{
-    font-size: 14px;
-    text-decoration: none;
-    background-color: rgb(232, 232, 232);
-    padding: 5px;
+div#opcao{
+    background-color: rgb(255, 255, 255);
 }
 
-main > section > a:hover{
-    background-color: rgb(203, 203, 203);
+div#opcao > input[type="button"] {
+    background-color: white;
+    margin: auto;
+    margin-top: 15px;
+    display: inline-block;
+    width: 45%;
+    height: 5%;
+
+    cursor: pointer;
+}
+
+div#opcao > input[type="button"]:hover {
+    background-color: rgba(191, 237, 255, 0.688);
 }
 
 main > section > input[type="text"] {
@@ -43,6 +52,8 @@ main > section > input[type="text"] {
     width: 92%;
     height: 50px;
 }
+
+
 
 main > section > input[type="button"] {
     background-color: rgb(0, 227, 0);
