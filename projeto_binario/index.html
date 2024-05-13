@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter binário</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Decimal para binário</h1>
+            <a href="#">Decimal para binário</a>
+            <a href="">Binário para decimal</a>
+            <input type="text" name="num" id="inum">
+            <input type="button" value="Converter" onclick="converter()">
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <script>
+
+        function converter(){
+            var valor = parseInt(document.getElementById("inum").value);
+            var resto = 0;
+            var unidade = 1;
+            while (valor >= 1)  {
+                if (valor % 2 == 1) {
+                    valor = valor / 2;
+                    resto;
+                }
+            }
+            document.getElementById("resultado").innerHTML = valor;
+        }
+    </script>
+</body>
+</html>
