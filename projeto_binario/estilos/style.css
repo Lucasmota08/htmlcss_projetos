@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 *{
+    background-color:  rgb(245, 245, 245);
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(24, 24, 24, 0.696);
-    background-color:  rgb(245, 245, 245);
 }
 
 
@@ -16,52 +16,61 @@ main{
 main > section{
     width: 320px;
     height: 600px;
-    margin: auto;
-    padding: 10px;
     background-color: white;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.263);
+    border-radius: 4px;
 }
 
 main > section > h1{
     background-color: white;
-    margin: 12px 0px 0px 2%;
+    margin: 2px 0px 0px 0px;
+    text-shadow: 1px 1px rgba(219, 219, 219, 0.188);
 }
 
-div#opcao{
+div#opcao /*opções*/{
     background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 
-div#opcao > input[type="button"] {
+div#opcao > input[type="button"] /*opções*/{    
+    width: 45%;
+    height: 26px;
     background-color: white;
     margin: auto;
     margin-top: 15px;
+    margin-right: 5px;
     display: inline-block;
-    width: 45%;
-    height: 5%;
 
     cursor: pointer;
 }
 
-div#opcao > input[type="button"]:hover {
+div#opcao > input[type="button"]:hover /*opções*/{
     background-color: rgba(191, 237, 255, 0.688);
 }
 
-main > section > input[type="text"] {
-    background-color: rgb(244, 255, 251);
-    margin: 12px 0px 0px 8px;
+main > section > input[type="text"] /*input texto*/{    
     width: 92%;
     height: 50px;
+    background-color: rgb(244, 255, 251);
+    margin: 12px 0px 0px 8px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
 }
 
 
 
 main > section > input[type="button"] {
+    width: 30%;
+    height: 5%;
     background-color: rgb(0, 227, 0);
     margin: auto;
     margin-top: 15px;
     display: block;
-    width: 30%;
-    height: 5%;
+    
+    border-radius: 12px;
 
     cursor: pointer;
 }
@@ -70,10 +79,12 @@ main > section > input[type="button"]:hover {
     background-color: rgb(0, 195, 0);
 }
 
-main > section > div#resultado {
-    margin: 12px 0px 0px 8px;
-    padding: 2px;
+main > section > div#resultado /*caixa do resultado*/{    
     width: 92%;
     height: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.659)
+    margin: auto;
+    margin-top: 12px;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.659);
+    border-radius: 4px;
 }

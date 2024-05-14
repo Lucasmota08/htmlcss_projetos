@@ -10,10 +10,10 @@
 <body>
     <main>
         <section>
-            <h1>Binário para decimal</h1>
+            <h1>Conversor de binários</h1>
             <div id="opcao">
                 <input type="button" value="Decimal para binário" id="opcao1" onclick="selecionar1()">
-                <input type="button" value="Binário para decimal" id="opcao2" onclick="selecionar2()">
+                <input type="button"  value="Binário para decimal" id="opcao2" onclick="selecionar2()">
             </div>
             <input type="text" name="num" id="inum">
             <input type="button" value="Converter" onclick="converter()">
@@ -23,15 +23,18 @@
     <script>
 
         function selecionar1() {
-            if (opcao1.style.background == 'white')
-                opcao1.style.background = 'rgb(191, 237, 255)';
-                opcao2.style.background = 'white';
+            if (opcao1.style.background == 'white') 
+                console.log(opcao1.style.background)
+                opcao1.style.background = 'rgb(118, 233, 255)'
+                opcao2.style.background = 'white'
+                
         }
 
         function selecionar2() {
             if (opcao2.style.background == 'white')
-                opcao2.style.background = 'rgb(191, 237, 255)';
-                opcao1.style.background = 'white';
+            console.log(opcao2.style.background)
+                opcao2.style.background = 'rgb(118, 233, 255)'
+                opcao1.style.background = 'white'
         }
 
         function converter(){
@@ -39,12 +42,16 @@
             var decimal = 0;
             var unidade = valor.length - 1;
 
-            if (opcao2.style.background == 'rgb(191, 237, 255)')
+            if (opcao2.style.background == 'rgb(118, 233, 255)')
             for (let i = 0; i < valor.length; i++) {
                 if (valor[i] === '1' || valor[i] === '0') {
                     decimal += parseInt(valor[i]) * Math.pow(2, unidade);
                     unidade--;
+                } else {
+                    decimal = "Número inválido"
                 }
+            } else {
+                decimal = "Nenhuma opção foi selecionada"
             }
             document.getElementById("resultado").innerHTML = decimal;
         }
