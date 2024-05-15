@@ -20,14 +20,14 @@ Grandes telas: acima de 1200px
         height: 30px;
     }
 
-    main > section > input[type="text"] /*input texto*/{    
+    div.inline-box > input[type="text"] /*input texto*/{    
         width: 92%;
-        height: 80px;
+        height: 70px;
     }
 
-    main > section > div#resultado /*caixa do resultado*/{    
+    div#resultado1 /*caixa do resultado*/{    
         width: 92%;
-        height: 80px;
+        height: 70px;
     }
 }
 
@@ -55,6 +55,8 @@ Grandes telas: acima de 1200px
 
     main > section > input[type="button"] {
         font-size: 16px;
+        width: 160px;
+        height: 30px;
     }
 
     div#resultado2 /*caixa do resultado*/{  
