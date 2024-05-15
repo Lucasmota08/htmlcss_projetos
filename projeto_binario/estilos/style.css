@@ -3,14 +3,13 @@
 *{
     background-color:  rgb(245, 245, 245);
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgba(24, 24, 24, 0.696);
 }
 
 
 main{
     background-color: rgb(245, 245, 245);
-    height: 100vh;
 }
 
 main > section{
@@ -36,10 +35,9 @@ div#opcao /*opções*/{
 }
 
 div#opcao > input[type="button"] /*opções*/{    
-    width: 45%;
+    width: 140px;
     height: 26px;
     background-color: white;
-    margin: auto;
     margin-top: 15px;
     margin-right: 5px;
     display: inline-block;
@@ -49,37 +47,44 @@ div#opcao > input[type="button"] /*opções*/{
 
 div#opcao > input[type="button"]:hover /*opções*/{
     background-color: rgba(191, 237, 255, 0.688);
+    font-weight: 500;
 }
 
-main > section > input[type="text"] /*input texto*/{    
+div.inline-box{    
+    background-color: white;
+    text-align: center;
+}
+
+div.inline-box > input[type="text"] /*input texto*/{    
     width: 92%;
     height: 50px;
     background-color: rgb(244, 255, 251);
-    margin: 12px 0px 0px 8px;
+    margin: auto;
+    margin-top: 12px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
 }
 
-
-
 main > section > input[type="button"] {
+    color: white;
     width: 30%;
-    height: 5%;
-    background-color: rgb(0, 227, 0);
+    height: 28px;
+    background-color: rgb(0, 192, 0);
     margin: auto;
     margin-top: 15px;
     display: block;
     
+    border: 0px solid black;
     border-radius: 12px;
 
     cursor: pointer;
 }
 
 main > section > input[type="button"]:hover {
-    background-color: rgb(0, 195, 0);
+    background-color: rgb(0, 214, 0);
 }
 
-main > section > div#resultado /*caixa do resultado*/{    
+div#resultado1 /*caixa do resultado*/{   
     width: 92%;
     height: 50px;
     margin: auto;
@@ -87,4 +92,23 @@ main > section > div#resultado /*caixa do resultado*/{
     padding: 2px;
     border: 1px solid rgba(0, 0, 0, 0.659);
     border-radius: 4px;
+}
+
+div#resultado2 /*caixa do resultado*/{   
+    display: none;
+    width: 92%;
+    height: 50px;
+    margin: auto;
+    margin-top: 12px;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.659);
+    border-radius: 4px;
+}
+
+p.resultadoTexto {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

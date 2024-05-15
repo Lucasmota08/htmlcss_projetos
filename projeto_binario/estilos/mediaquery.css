@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* Typical device breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600 até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width: 768px) and (max-width:1200px) {
+    main > section{
+        width: 560px;
+        height: 600px;
+    }
+
+    div#opcao > input[type="button"] /*opções*/{    
+        width: 140px;
+        height: 30px;
+    }
+
+    main > section > input[type="text"] /*input texto*/{    
+        width: 92%;
+        height: 80px;
+    }
+
+    main > section > div#resultado /*caixa do resultado*/{    
+        width: 92%;
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    main > section{
+        width: 820px;
+        height: 300px;
+    }
+
+    div#opcao > input[type="button"] /*opções*/{    
+        width: 140px;
+        height: 30px;
+    }
+
+    div.inline-box{
+        display: flex;
+        height: 100px;
+    }
+
+    div.inline-box > input[type="text"] /*input texto*/{     
+        display: block;
+        width: 360px;
+        height: 80px;
+    }
+
+    main > section > input[type="button"] {
+        font-size: 16px;
+    }
+
+    div#resultado2 /*caixa do resultado*/{  
+        display: block;
+        width: 360px;
+        height: 80px;
+        padding: 1px 2px;
+        margin-top: 12px;
+    }
+
+    div#resultado1 /*caixa do resultado*/{   
+        display: none;
+    }
+
+    p.resultadoTexto{
+        left: 0px;
+        transform: translate(5%,-50%);
+    }
+}

@@ -15,16 +15,18 @@
                 <input type="button" value="Decimal para binário" id="opcao1" onclick="selecionar1()">
                 <input type="button"  value="Binário para decimal" id="opcao2" onclick="selecionar2()">
             </div>
-            <input type="text" name="num" id="inum">
+            <div class="inline-box">
+                <input type="text" name="num" id="inum">
+                <div id="resultado2"><p id="resultadoTexto2" class="resultadoTexto"></p></div>
+            </div>
             <input type="button" value="Converter" onclick="converter()">
-            <div id="resultado"></div>
+            <div id="resultado1"><p id="resultadoTexto1" class="resultadoTexto"></p></div>
         </section>
     </main>
     <script>
 
         function selecionar1() {
             if (opcao1.style.background == 'white') 
-                console.log(opcao1.style.background)
                 opcao1.style.background = 'rgb(118, 233, 255)'
                 opcao2.style.background = 'white'
                 
@@ -32,7 +34,6 @@
 
         function selecionar2() {
             if (opcao2.style.background == 'white')
-            console.log(opcao2.style.background)
                 opcao2.style.background = 'rgb(118, 233, 255)'
                 opcao1.style.background = 'white'
         }
@@ -53,7 +54,8 @@
             } else {
                 decimal = "Nenhuma opção foi selecionada"
             }
-            document.getElementById("resultado").innerHTML = decimal;
+            document.getElementById("resultadoTexto2").innerHTML = decimal;
+            document.getElementById("resultadoTexto1").innerHTML = decimal;
         }
     </script>
 </body>
