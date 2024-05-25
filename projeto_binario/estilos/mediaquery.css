@@ -42,13 +42,13 @@ Grandes telas: acima de 1200px
         height: 30px;
     }
 
-    div.inline-box{
+    div.flex{
         display: flex;
+        justify-content: space-between;
         height: 100px;
     }
 
     div.inline-box > input[type="text"] /*input texto*/{     
-        display: block;
         width: 360px;
         height: 80px;
     }
