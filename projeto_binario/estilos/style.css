@@ -84,7 +84,7 @@ main > section > input[type="button"] {
 main > section > input[type="button"]:hover {
     background-color: rgb(0, 214, 0);
     transform: scale(1.02);
-    transition: 0.05s all ease-in-out;
+    transition: 0.1s all ease-in-out;
 }
 
 div#resultado1 /*caixa do resultado*/{   
