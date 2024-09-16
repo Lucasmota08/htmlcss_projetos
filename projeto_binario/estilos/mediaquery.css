@@ -12,7 +12,8 @@ Grandes telas: acima de 1200px
 @media screen and (min-width: 768px) and (max-width:1200px) {
     main > section{
         width: 560px;
-        height: 600px;
+        min-height: 1px;
+        padding-bottom: 15px;
     }
 
     div#opcao > input[type="button"] /*opções*/{    
@@ -20,21 +21,22 @@ Grandes telas: acima de 1200px
         height: 30px;
     }
 
-    div.inline-box > input[type="text"] /*input texto*/{    
+    div.boxes > input[type="text"] /*input texto*/{    
         width: 92%;
-        height: 70px;
+        height: 120px;
     }
 
     div#resultado1 /*caixa do resultado*/{    
         width: 92%;
-        height: 70px;
+        height: 120px;
     }
 }
 
 @media screen and (min-width: 1200px){
     main > section{
         width: 820px;
-        height: 300px;
+        min-height: 1px;
+        padding-bottom: 15px;
     }
 
     div#opcao > input[type="button"] /*opções*/{    
@@ -42,15 +44,15 @@ Grandes telas: acima de 1200px
         height: 30px;
     }
 
-    div.flex{
+    div.boxes{
         display: flex;
         justify-content: space-between;
-        height: 100px;
+        min-height: 1px;
     }
 
-    div.inline-box > input[type="text"] /*input texto*/{     
+    div.boxes > input[type="text"] /*input texto*/{     
         width: 360px;
-        height: 80px;
+        height: 300px;
     }
 
     main > section > input[type="button"] {
@@ -60,9 +62,11 @@ Grandes telas: acima de 1200px
     }
 
     div#resultado2 /*caixa do resultado*/{  
-        display: block;
+        display: flex;
+        justify-content: baseline;
+        align-items: start;
         width: 360px;
-        height: 80px;
+        height: 300px;
         padding: 1px 2px;
         margin-top: 12px;
     }

@@ -15,30 +15,55 @@
                 <input type="button" value="Decimal para binário" id="opcao1" onclick="selecionar1()">
                 <input type="button"  value="Binário para decimal" id="opcao2" onclick="selecionar2()">
             </div>
-            <div class="inline-box flex">
+            <p id="text">Texto para codificar:</p>
+            <div class="boxes flex">
                 <input type="text" name="num" id="inum">
                 <div id="resultado2"><p id="resultadoTexto2" class="resultadoTexto"></p></div>
             </div>
             <input type="button" value="Converter" onclick="converter()">
-            <div id="resultado1"><p id="resultadoTexto1" class="resultadoTexto"></p></div>
+            <div class="boxes flex">
+                <div id="resultado1"><p id="resultadoTexto1" class="resultadoTexto"></p></div>
+            </div>
         </section>
     </main>
     <script>
+        var opcao1active = 0;
+        var opcao2active = 0;
+
+        function verificarEstilo(){
+            var resultado1 = document.getElementById("resultado1");
+            var resultado2 = document.getElementById("resultado2");
+            if (getComputedStyle(resultado2).display === 'flex') {
+                resultado1.style.display = 'none'
+            }
+        }
 
         function selecionar1() {
+            var opcao1 = document.getElementById('opcao1');
+            opcao1active = 1;
+            opcao2active = 0;
             opcao1.style.background = 'rgb(118, 233, 255)'
             opcao2.style.background = 'white'
+            var text = document.getElementById('text');
+            text.innerHTML = 'Texto para codificar:';
         }
 
         function selecionar2() {
+            var opcao2 = document.getElementById('opcao2');
+            opcao2active = 1;
+            opcao1active = 0;
             opcao2.style.background = 'rgb(118, 233, 255)'
             opcao1.style.background = 'white'
+            var text = document.getElementById('text');
+            text.innerHTML = 'Texto para decodificar:';
         }
 
         function converter(){
             var valor = document.getElementById("inum").value;
+            var resultado1 = document.getElementById("resultado1");
+            var resultado2 = document.getElementById("resultado2");
 
-            if (opcao1.style.background == 'rgb(118, 233, 255)') {
+            if (opcao1active == 1) {
                 var binario = [];
                 var valorOriginal = valor;
                 var resto;
@@ -55,9 +80,15 @@
 
                 document.getElementById("resultadoTexto2").innerHTML = binario;
                 document.getElementById("resultadoTexto1").innerHTML = binario;
+
+                if (getComputedStyle(resultado2).display === 'flex') {
+                    resultado1.style.display = 'none'
+                } else {
+                    resultado1.style.display = 'flex';
+                }
             }
 
-            else if (opcao2.style.background == 'rgb(118, 233, 255)') {
+            else if (opcao2active == 1) {
                 var decimal = 0;
                 var unidade = valor.length - 1;
 
@@ -71,12 +102,23 @@
                 } 
                 document.getElementById("resultadoTexto2").innerHTML = decimal;
                 document.getElementById("resultadoTexto1").innerHTML = decimal;
+
+                if (getComputedStyle(resultado2).display === 'flex') {
+                    resultado1.style.display = 'none'
+                } else {
+                    resultado1.style.display = 'flex';
+                }
             }
             
             else {
                 decimal = "Nenhuma opção foi selecionada"
+                document.getElementById("resultadoTexto2").innerHTML = decimal;
+                document.getElementById("resultadoTexto1").innerHTML = decimal;
             }
+            console.log('1')
         }  
+
+        window.addEventListener('resize', verificarEstilo);
     </script>
 </body>
 </html>
