@@ -18,9 +18,10 @@
                 construction
                 </span></a>
             <div class="row">
-                <a class="transform escuro small" target="_blank" href="https://projeto-desenhosportfolio.vercel.app/"> &#x1F3A8; </a>
-                <a class="transform escuro small" target="_blank" href="https://projeto-fabledlegacy.vercel.app/"> &#x1F9D9; </a>
+                <a class="transformBigger escuro small" target="_blank" href="https://projeto-desenhosportfolio.vercel.app/"> <span>&#x1F3A8;</span> </a>
+                <a class="transformBigger escuro small" target="_blank" href="https://projeto-fabledlegacy.vercel.app/"> <span>&#x1F9D9;</span> </a>
             </div>
+            <a class="transform escuro" target="_blank" href="https://lucas-projeto-sorveteria.vercel.app/"> <span>&#x1F366; &#x1F367; &#x1F368;</span> </a>
         </section>
     </main>
     
@@ -29,29 +30,27 @@
         var e = 0;
 
         function clarear() {
-            console.log(i)
+            console.log(i);
             i++;
-            if (i >= 2) {
-                var fundo = document.getElementById('fundo')
-                var escuro = document.getElementsByClassName('escuro')
-                fundo.style.background = 'linear-gradient(to right top, rgb(222, 222, 222), rgb(226, 226, 226), rgb(230, 230, 230), rgb(234, 234, 234))'
+            var fundo = document.getElementById('fundo')
+            var escuro = document.getElementsByClassName('escuro')
+            if (i == 1) {
+                fundo.style.background = 'linear-gradient(185deg, rgb(230, 230, 230), rgb(188, 188, 188))'
 
                 for (var j = 0; j < escuro.length; j++) {
                     escuro[j].style.color = 'black';
                     escuro[j].style.boxShadow = '0px 0px 5px rgba(230, 230, 230, 0.201)'
                 }
-
-                e++;
-                if (e == 2) {
-                    i = 0;
-                    e = 0;
-                    for (var j = 0; j < escuro.length; j++) {
-                    fundo.style.background = 'linear-gradient(to right top, rgb(0, 0, 0), rgb(28, 28, 28), rgb(43, 43, 43), rgb(63, 63, 63))'
-                    escuro[j].style.color = 'white';
-                    escuro[j].style.boxShadow = '0px 0px 5px rgba(0, 0, 0, 0.301)'
-                    }
-                }
             } 
+            else if (i == 2) {
+                console.log(i)
+                i = 0;
+                for (var j = 0; j < escuro.length; j++) {
+                fundo.style.background = 'linear-gradient(to right top, rgb(0, 0, 0), rgb(28, 28, 28), rgb(43, 43, 43), rgb(63, 63, 63))'
+                escuro[j].style.color = 'white';
+                escuro[j].style.boxShadow = '0px 0px 5px rgba(0, 0, 0, 0.301)'
+                }
+            }
         }
     </script>
 </body>

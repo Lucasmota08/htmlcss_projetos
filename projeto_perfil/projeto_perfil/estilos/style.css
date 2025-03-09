@@ -62,13 +62,30 @@ a{
 
 .transform:hover{
     transition: 0.2s all ease-in-out;
-    transform: scale(1.02);
     border: 1px solid white;
+    transform: scale(1.02);
+}
+
+.transform:active{
+    transform: scale(0.96);
+}
+
+.transformBigger:hover{
+    transition: 0.2s all ease-in-out;
+    border: 1px solid white;
+    transform: scale(1.04);
+}
+
+.transformBigger:active{
+    transform: scale(0.92);
 }
 
 .transformImg:hover{
-    transition: 0.15s all ease-in-out;
-    transform: scale(1.05);
+    transition: 0.10s all ease-in-out;
+}
+
+.transformImg:active{
+    transform: scale(0.96);
 }
 
 a > span.icon{
@@ -91,4 +108,8 @@ a > span.icon{
 
 .small{
     width: 100%;
+}
+
+a > span{
+    text-shadow: 1px 1px 1px rgba(112, 112, 112, 0.577);
 }
