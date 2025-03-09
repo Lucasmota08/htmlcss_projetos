@@ -1,0 +1,2 @@
+clicar em um texto + shift A cria um frame
+clicar em um objeto, segurar Alt e mover o mouse aparece as distâncias
